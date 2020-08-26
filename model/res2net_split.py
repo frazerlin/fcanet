@@ -246,13 +246,13 @@ class Res2NetSplit(nn.Module):
         self.load_state_dict(state_dict)
 
 
-def Res2NetSplit50(output_stride, BatchNorm, pretrained=True,layer_range=[0,4], aux_channel=0):
+def Res2NetSplit50(output_stride, BatchNorm, pretrained=False,layer_range=[0,4], aux_channel=0):
     model = Res2NetSplit(Bottle2neck, [3, 4, 6, 3], output_stride, BatchNorm, layer_range=layer_range, aux_channel=aux_channel)
     if pretrained:
         model._load_pretrained_model('https://shanghuagao.oss-cn-beijing.aliyuncs.com/res2net/res2net50_v1b_26w_4s-3cf99910.pth')
     return model
 
-def Res2NetSplit101(output_stride, BatchNorm, pretrained=True,layer_range=[0,4], aux_channel=0):
+def Res2NetSplit101(output_stride, BatchNorm, pretrained=False,layer_range=[0,4], aux_channel=0):
     model = Res2NetSplit(Bottle2neck, [3, 4, 23, 3], output_stride, BatchNorm, layer_range=layer_range, aux_channel=aux_channel)
     if pretrained:
         model._load_pretrained_model('https://shanghuagao.oss-cn-beijing.aliyuncs.com/res2net/res2net101_v1b_26w_4s-0812c246.pth')
