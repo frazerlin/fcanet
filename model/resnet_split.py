@@ -215,31 +215,31 @@ class ResNetSplit(nn.Module):
         state_dict.update(model_dict)
         self.load_state_dict(state_dict)
 
-def ResNetSplit18(output_stride, BatchNorm, pretrained=True,layer_range=[0,4], aux_channel=0):
+def ResNetSplit18(output_stride, BatchNorm, pretrained=False,layer_range=[0,4], aux_channel=0):
     model = ResNetSplit(BasicBlock, [2, 2, 2, 2], output_stride, BatchNorm,layer_range=layer_range,aux_channel=aux_channel)
     if pretrained:
         model._load_pretrained_model('https://download.pytorch.org/models/resnet18-5c106cde.pth')
     return model
 
-def ResNetSplit34(output_stride, BatchNorm, pretrained=True,layer_range=[0,4], aux_channel=0):
+def ResNetSplit34(output_stride, BatchNorm, pretrained=False,layer_range=[0,4], aux_channel=0):
     model = ResNetSplit(BasicBlock, [3, 4, 6, 3], output_stride, BatchNorm,layer_range=layer_range, aux_channel=aux_channel)
     if pretrained:
         model._load_pretrained_model('https://download.pytorch.org/models/resnet34-333f7ec4.pth')
     return model
 
-def ResNetSplit50(output_stride, BatchNorm, pretrained=True,layer_range=[0,4], aux_channel=0):
+def ResNetSplit50(output_stride, BatchNorm, pretrained=False,layer_range=[0,4], aux_channel=0):
     model = ResNetSplit(Bottleneck, [3, 4, 6, 3], output_stride, BatchNorm, layer_range=layer_range, aux_channel=aux_channel)
     if pretrained:
         model._load_pretrained_model('https://download.pytorch.org/models/resnet50-19c8e357.pth')
     return model
 
-def ResNetSplit101(output_stride, BatchNorm, pretrained=True,layer_range=[0,4], aux_channel=0):
+def ResNetSplit101(output_stride, BatchNorm, pretrained=False,layer_range=[0,4], aux_channel=0):
     model = ResNetSplit(Bottleneck, [3, 4, 23, 3], output_stride, BatchNorm, layer_range=layer_range, aux_channel=aux_channel)
     if pretrained:
         model._load_pretrained_model('https://download.pytorch.org/models/resnet101-5d3b4d8f.pth')
     return model
 
-def ResNetSplit152(output_stride, BatchNorm, pretrained=True,layer_range=[0,4], aux_channel=0):
+def ResNetSplit152(output_stride, BatchNorm, pretrained=False,layer_range=[0,4], aux_channel=0):
     model = ResNetSplit(Bottleneck, [3, 8, 36, 3], output_stride, BatchNorm, layer_range=layer_range, aux_channel=aux_channel)
     if pretrained:
         model._load_pretrained_model('https://download.pytorch.org/models/resnet152-b121ed2d.pth')
