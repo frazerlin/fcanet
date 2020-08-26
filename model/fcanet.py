@@ -158,11 +158,11 @@ class FCANet(nn.Module):
     def __init__(self, backbone='resnet', BatchNorm = nn.BatchNorm2d):
         super(FCANet, self).__init__()
         if backbone=='resnet':
-            self.backbone_pre = resnet_split.ResNetSplit101(16,BatchNorm,True,[0,1],2)
-            self.backbone_last = resnet_split.ResNetSplit101(16,BatchNorm,True,[2,4],0)
+            self.backbone_pre = resnet_split.ResNetSplit101(16,BatchNorm,False,[0,1],2)
+            self.backbone_last = resnet_split.ResNetSplit101(16,BatchNorm,False,[2,4],0)
         elif backbone=='res2net':
-            self.backbone_pre = res2net_split.Res2NetSplit101(16,BatchNorm,True,[0,1],2)
-            self.backbone_last = res2net_split.Res2NetSplit101(16,BatchNorm,True,[2,4],0)
+            self.backbone_pre = res2net_split.Res2NetSplit101(16,BatchNorm,False,[0,1],2)
+            self.backbone_last = res2net_split.Res2NetSplit101(16,BatchNorm,False,[2,4],0)
 
         self.my_aspp = MyASPP(in_ch=2048+512,out_ch=256,dilations=[1, 6, 12, 18],BatchNorm=BatchNorm, if_global=True)
         self.my_decoder=MyDecoder(in_ch=256, in_ch_reduce=None, side_ch=256, side_ch_reduce=48,out_ch=256,BatchNorm=BatchNorm)
