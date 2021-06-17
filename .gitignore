@@ -1,0 +1,6 @@
+**/__pycache__
+/dataset/*
+/pretrained_model/*
+!**/.gitkeep
+
+
