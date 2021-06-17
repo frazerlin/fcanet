@@ -8,7 +8,7 @@ The official PyTorch implementation of CVPR 2020 paper ["Interactive Image Segme
 - Matplotlib  
 
 ## Useage
-Put the pretrained model into the created folder "pretrained_model" and the unzipped datasets into the created folder "dataset".
+Put the pretrained model into the folder "pretrained_model" and the unzipped datasets into the folder "dataset".
 
 ### Evalution:
 ```
@@ -37,12 +37,17 @@ python annotator.py --backbone [resnet,res2net] --input test.jpg --output test_m
 ## Citation
 If you find this work or code is helpful in your research, please cite:
 ```
-@inproceedings{fClick20CVPR,
- title={Interactive Image Segmentation with First Click Attention},
- author={Zheng Lin and Zhao Zhang and Lin-Zhuo Chen and Ming-Ming Cheng and Shao-Ping Lu},
- booktitle={IEEE CVPR},
- year={2020},
+@inproceedings{lin2020fclick,
+  title={Interactive image segmentation with first click attention},
+  author={Lin, Zheng and Zhang, Zhao and Chen, Lin-Zhuo and Cheng, Ming-Ming and Lu, Shao-Ping},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={13339--13348},
+  year={2020}
 }
 ```
 ## Contact
 If you have any questions, feel free to contact me via: `frazer.linzheng(at)gmail.com`.
+Welcome to visit [the project page](https://www.lin-zheng.com/fclick/) or [my home page](https://www.lin-zheng.com/).
+
+## License
+The source code is free for research and education use only. Any comercial use should get formal permission first.
