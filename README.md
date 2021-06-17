@@ -46,8 +46,7 @@ If you find this work or code is helpful in your research, please cite:
 }
 ```
 ## Contact
-If you have any questions, feel free to contact me via: `frazer.linzheng(at)gmail.com`.
-
+If you have any questions, feel free to contact me via: `frazer.linzheng(at)gmail.com`.  
 Welcome to visit [the project page](https://www.lin-zheng.com/fclick/) or [my home page](https://www.lin-zheng.com/).
 
 ## License
