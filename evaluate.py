@@ -120,7 +120,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if Path('dataset/{}'.format(args.dataset)).exists():
-        model = init_model('fcanet',args.backbone,'./pretrained_model/fcbnet-{}.pth'.format(args.backbone),if_cuda=not args.cpu)
+        model = init_model('fcanet',args.backbone,'./pretrained_model/fcanet-{}.pth'.format(args.backbone),if_cuda=not args.cpu)
         eval_dataset(model,args.dataset,if_sis=args.sis, miou_target=(None if args.miou<0 else args.miou),if_cuda=not args.cpu)
     else:
         print('not found folder [dataset/{}]'.format(args.dataset))
