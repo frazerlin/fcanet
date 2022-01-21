@@ -34,6 +34,11 @@ python annotator.py --backbone [resnet,res2net] --input test.jpg --output test_m
 - fcanet-res2net ( [GoogleDrive](https://drive.google.com/open?id=12wgzK5Gx_ku3jSm9RcUx_OmEHU3HGfG_
 ) | [BaiduYun](https://pan.baidu.com/s/157Lkno7x8YSdmQzaYms-lg) pwd: **xzmx** )
 
+
+## Other framework
+We offer the [code](https://gitee.com/mindspore/models/tree/master/research/cv/FCANet) in constructed by MindSpore framework.
+
+
 ## Citation
 If you find this work or code is helpful in your research, please cite:
 ```
